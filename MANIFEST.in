@@ -1,0 +1,1 @@
+recursive-include oslo *.html *.css *.js *.conf *.jpg *.gif
