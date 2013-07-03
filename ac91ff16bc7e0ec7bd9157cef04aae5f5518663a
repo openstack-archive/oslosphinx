@@ -1,0 +1,10 @@
+Verified+2: Jenkins
+Approved+1: Mark McLoughlin <markmc@redhat.com>
+Code-Review+2: Mark McLoughlin <markmc@redhat.com>
+Approved+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Submitted-by: Jenkins
+Submitted-at: Wed, 03 Jul 2013 19:41:28 +0000
+Reviewed-on: https://review.openstack.org/35202
+Project: openstack/oslo.sphinx
+Branch: refs/heads/master
