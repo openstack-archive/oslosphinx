@@ -1,6 +1,5 @@
 {% extends "basic/layout.html" %}
 {% set css_files = css_files + ['_static/tweaks.css'] %}
-{% set script_files = script_files + ['_static/jquery.tweet.js'] %}
 
 {%- macro sidebar() %}
       {%- if not embedded %}{% if not theme_nosidebar|tobool %}
