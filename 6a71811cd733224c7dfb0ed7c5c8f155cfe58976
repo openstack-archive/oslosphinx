@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Doug Hellmann <doug.hellmann@dreamhost.com>
+Approved+1: Flavio Percoco <fpercoco@redhat.com>
+Code-Review+2: Flavio Percoco <fpercoco@redhat.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 20 Sep 2013 15:27:24 +0000
+Reviewed-on: https://review.openstack.org/47389
+Project: openstack/oslo.sphinx
+Branch: refs/heads/master
