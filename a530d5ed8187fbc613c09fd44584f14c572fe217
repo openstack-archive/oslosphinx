@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Approved+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Code-Review+2: Ben Nemec <openstack@nemebean.com>
+Submitted-by: Jenkins
+Submitted-at: Mon, 30 Dec 2013 15:30:38 +0000
+Reviewed-on: https://review.openstack.org/62029
+Project: openstack/oslo.sphinx
+Branch: refs/heads/master
