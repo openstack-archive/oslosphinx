@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Approved+1: Doug Hellmann <doug.hellmann@dreamhost.com>
+Code-Review+2: Doug Hellmann <doug.hellmann@dreamhost.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 07 Feb 2014 20:48:45 +0000
+Reviewed-on: https://review.openstack.org/71986
+Project: openstack/oslosphinx
+Branch: refs/heads/master
