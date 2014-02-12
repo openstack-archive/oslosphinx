@@ -18,7 +18,7 @@
 To use this mapping in a project, first add 'sphinx.ext.intersphinx' to
 your extensions list in conf.py. Then::
 
-   from oslo.sphinx import intersphinx
+   from oslosphinx import intersphinx
    intersphinx_mapping = intersphinx.mapping
 
 You'll be able to link to other project's documentation, such as:
