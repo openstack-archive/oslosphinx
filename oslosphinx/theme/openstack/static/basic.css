@@ -73,6 +73,10 @@ div.sphinxsidebar input {
     font-size: 1em;
 }
 
+div.sphinxsidebar span.pre {
+    word-wrap: break-word;
+}
+
 img {
     border: 0;
 }
