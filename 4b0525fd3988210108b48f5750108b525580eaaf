@@ -1,0 +1,10 @@
+Code-Review+1: Monty Taylor <mordred@inaugust.com>
+Verified+2: Jenkins
+Approved+1: Doug Hellmann <doug.hellmann@dreamhost.com>
+Code-Review+2: Doug Hellmann <doug.hellmann@dreamhost.com>
+Code-Review+2: Ben Nemec <openstack@nemebean.com>
+Submitted-by: Jenkins
+Submitted-at: Mon, 14 Apr 2014 21:19:14 +0000
+Reviewed-on: https://review.openstack.org/79311
+Project: openstack/oslosphinx
+Branch: refs/heads/master
