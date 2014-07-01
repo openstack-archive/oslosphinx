@@ -92,3 +92,9 @@ div.document {
   width: 960px;
   margin: 0 auto;
 }
+
+div.sphinxsidebar h3.highlighted {
+  background-color: #cf2f19;
+  color: #EEE;
+  text-shadow: 1px 1px 0 #740101;
+}
