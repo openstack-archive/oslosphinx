@@ -1,10 +1,10 @@
 {% extends "basic/layout.html" %}
 {% set css_files = css_files + ['_static/tweaks.css'] %}
 
-{%- macro sidebar() %}
-      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
+{% block sidebar2 %}
+<div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+        {%- if not embedded %}{% if not theme_nosidebar|tobool %}
           {%- block sidebarlogo %}
           {%- if logo %}
             <p class="logo"><a href="{{ pathto(master_doc) }}">
@@ -12,6 +12,9 @@
             </a></p>
           {%- endif %}
           {%- endblock %}
+          {%- if theme_incubating|tobool %}
+          <h3 class="highlighted"><a href="https://wiki.openstack.org/wiki/Governance/NewProjects">{{ _('Incubated Project') }}</a></h3>
+          {%- endif %}
           {%- block sidebartoc %}
           {%- if display_toc %}
             <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
@@ -59,10 +62,10 @@
           <script type="text/javascript">$('#searchbox').show(0);</script>
           {%- endif %}
           {%- endblock %}
-        </div>
-      </div>
       {%- endif %}{% endif %}
-{%- endmacro %}
+    </div>
+</div>
+{% endblock %}
 
 {% block relbar1 %}{% endblock relbar1 %}
 
