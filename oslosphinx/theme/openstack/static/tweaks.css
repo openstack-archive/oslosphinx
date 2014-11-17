@@ -102,3 +102,14 @@ div.sphinxsidebar h3.highlighted {
 div.sphinxsidebar h3.highlighted a {
   color: #EEE;
 }
+
+/** provide visual separation for sidebar for increased readability. */
+div.sphinxsidebar ul li {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+div.sphinxsidebar ul li ul li {
+  margin-top: 0;
+  font-weight: normal;
+}
