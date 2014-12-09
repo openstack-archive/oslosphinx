@@ -6,6 +6,7 @@
    :maxdepth: 2
 
    usage
+   check_blueprints
    contributing
 
 Indices and tables
