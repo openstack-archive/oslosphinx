@@ -1,6 +1,6 @@
-==================
- Using oslosphinx
-==================
+============================
+ Using the oslosphinx Theme
+============================
 
 To use the theme, add ``'oslosphinx'`` to the ``extensions`` list in
 the ``conf.py`` file in your Sphinx project.
