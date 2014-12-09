@@ -3,3 +3,5 @@
 # process, which may cause wedges in the gate later.
 
 pbr>=0.6,!=0.7,<1.0
+requests>=1.2.1,!=2.4.0
+launchpadlib
