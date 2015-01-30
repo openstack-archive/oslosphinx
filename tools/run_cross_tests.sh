@@ -10,7 +10,10 @@
 set -e
 
 project_dir="$1"
-venv="$2"
+shift
+venv="$1"
+shift
+posargs="$*"
 
 if [ -z "$project_dir" -o -z "$venv" ]
 then
@@ -19,11 +22,12 @@ ERROR: Missing argument(s)
 
 Usage:
 
-  $0 PROJECT_DIR VIRTUAL_ENV
+  $0 PROJECT_DIR VIRTUAL_ENV [POSARGS]
 
 Example, run the python 2.7 tests for python-neutronclient:
 
   $0 /opt/stack/python-neutronclient py27
+  $0 /opt/stack/nova py27 xenapi
 
 EOF
     exit 1
@@ -36,18 +40,23 @@ tox_envbin=$project_dir/.tox/$venv/bin
 
 our_name=$(python setup.py --name)
 
+# Build the egg-info, including the source file list,
+# so we install all of the files, even if the package
+# list or name has changed.
+python setup.py egg_info
+
 # Replace the pip-installed package with the version in our source
 # tree. Look to see if we are already installed before trying to
 # uninstall ourselves, to avoid failures from packages that do not use us
 # yet.
 if $tox_envbin/pip freeze | grep -q $our_name
 then
-    $tox_envbin/pip uninstall -y $our_name
+    $tox_envbin/pip uninstall -y $our_name || echo "Ignoring error"
 fi
 $tox_envbin/pip install -U .
 
 # Run the tests
-(cd $project_dir && tox -e $venv)
+(cd $project_dir && tox -e $venv -- $posargs)
 result=$?
 
 
