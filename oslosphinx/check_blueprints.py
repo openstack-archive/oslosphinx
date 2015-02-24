@@ -74,9 +74,13 @@ class BlueprintChecker(object):
 
     def blueprint_exists(self, project_name, bp_name):
         """Return boolean indicating whether the blueprint exists."""
+        self.app.info('Checking for %s in %s' % (bp_name, project_name))
         url = self.BP_URL_TEMPLATE % (project_name, bp_name)
         response = requests.get(url)
-        return response.status_code == 200
+        if response.status_code == 200:
+            self.app.info('Found %s in %s' % (bp_name, project_name))
+            return True
+        return False
 
     def check(self, bp_name):
         """Given one blueprint name, check to see if it is valid."""
@@ -84,10 +88,26 @@ class BlueprintChecker(object):
             return True
         self._load_project_settings()
         self.app.info('')  # emit newline
+        candidate_project, dash, bp_name_to_find = bp_name.partition('-')
+        if candidate_project in self.project_names:
+            # First check the shortened name of the blueprint in the project.
+            if self.blueprint_exists(candidate_project, bp_name_to_find):
+                return
+            # Then check the full name of the blueprint in the project.
+            if self.blueprint_exists(candidate_project, bp_name):
+                return
+            self.app.info(
+                ('Blueprint name %r looks like it starts with a project '
+                 'name, but %r was not found in project %r') %
+                (bp_name, bp_name_to_find, candidate_project)
+            )
+        else:
+            self.app.info(
+                'Blueprint checking is faster if the file names '
+                'start with the launchpad project name.'
+            )
         for project_name in self.project_names:
-            self.app.info('Checking for %s in %s' % (bp_name, project_name))
             if self.blueprint_exists(project_name, bp_name):
-                self.app.info('Found %s in %s' % (bp_name, project_name))
                 self._good_bps.add(bp_name)
                 break
         else:
