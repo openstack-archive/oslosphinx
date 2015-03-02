@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Workflow+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Code-Review+2: Ben Nemec <openstack@nemebean.com>
+Submitted-by: Jenkins
+Submitted-at: Mon, 02 Mar 2015 03:26:11 +0000
+Reviewed-on: https://review.openstack.org/158922
+Project: openstack/oslosphinx
+Branch: refs/heads/master
