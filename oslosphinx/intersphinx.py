@@ -66,6 +66,6 @@ mapping = dict(
     trove=('http://docs.openstack.org/developer/trove/', None),
     # Other things of note
     python=('http://docs.python.org/', None),
-    infra=('http://ci.openstack.org/', None),
-    zuul=('http://ci.openstack.org/zuul/', None),
+    infra=('http://docs.openstack.org/infra/system-config/', None),
+    zuul=('http://docs.openstack.org/infra/zuul/', None),
 )
