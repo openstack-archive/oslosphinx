@@ -12,9 +12,6 @@
             </a></p>
           {%- endif %}
           {%- endblock %}
-          {%- if theme_incubating|tobool %}
-          <h3 class="highlighted"><a href="https://wiki.openstack.org/wiki/Governance/NewProjects">{{ _('Incubated Project') }}</a></h3>
-          {%- endif %}
           {%- block sidebartoc %}
           {%- if display_toc %}
             <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
