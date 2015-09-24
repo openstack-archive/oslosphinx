@@ -1,5 +1,6 @@
-OpenStack Sphinx Extensions
-===========================
+=============================
+ OpenStack Sphinx Extensions
+=============================
 
 Theme and extension support for Sphinx documentation from the
 OpenStack project.
