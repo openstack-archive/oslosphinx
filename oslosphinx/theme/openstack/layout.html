@@ -30,6 +30,15 @@
                                   title="{{ _('next chapter') }}">{{ next.title }}</a></p>
           {%- endif %}
           {%- endblock %}
+          {%- block projectsource %}
+            {%- if cgit_link %}
+            <h3>{{ _('Project Source') }}</h3>
+            <ul class="this-page-menu">
+              <li><a href="{{cgit_link}}"
+                     rel="nofollow">{{ _('Project Source') }}</a></li>
+            </ul>
+            {%- endif %}
+          {%- endblock %}
           {%- block sidebarsourcelink %}
           {%- if show_source and has_source and sourcename %}
             <h3>{{ _('This Page') }}</h3>
