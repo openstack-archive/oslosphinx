@@ -85,7 +85,7 @@ a.headerlink {
 
 div.body {
   margin-top: -25px;
-  margin-left: 230px;
+  margin-left: 260px;
 }
 
 div.document {
@@ -112,4 +112,17 @@ div.sphinxsidebar ul li {
 div.sphinxsidebar ul li ul li {
   margin-top: 0;
   font-weight: normal;
+}
+
+/** Provide the sidebar to allow long words to go to the next line
+    making them easier to read.*/
+div.sphinxsidebar a {
+    display: block;
+    text-indent: -1em;
+    margin-left: 1em;
+    word-wrap: break-word;
+}
+
+div.sphinxsidebar ul {
+  margin: 10px 10px;
 }
