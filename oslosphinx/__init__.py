@@ -28,7 +28,7 @@ def _html_page_context(app, pagename, templatename, context, doctree):
             git_remote = subprocess.check_output(
                 ['git', 'config', '--local', '--get', 'remote.origin.url']
             )
-        except subprocess.CheckedProcessException:
+        except subprocess.CalledProcessError:
             _cgit_link = 'unknown'
         else:
             parsed = urlparse.urlparse(git_remote)
