@@ -13,6 +13,28 @@
 #    under the License.
 
 import os
+import subprocess
+import urlparse
+
+
+CGIT_BASE = 'http://git.openstack.org/cgit/'
+_cgit_link = None
+
+
+def _html_page_context(app, pagename, templatename, context, doctree):
+    global _cgit_link
+    if _cgit_link is None:
+        try:
+            git_remote = subprocess.check_output(
+                ['git', 'config', '--local', '--get', 'remote.origin.url']
+            )
+        except subprocess.CheckedProcessException:
+            _cgit_link = 'unknown'
+        else:
+            parsed = urlparse.urlparse(git_remote)
+            _cgit_link = CGIT_BASE + parsed.path.lstrip('/')
+    context['cgit_link'] = _cgit_link
+    return context
 
 
 def builder_inited(app):
@@ -33,6 +55,8 @@ def builder_inited(app):
     # the templates and theme.
     if hasattr(app.builder, 'init_templates'):
         app.builder.init_templates()
+    # Register our page context additions
+    app.connect('html-page-context', _html_page_context)
 
 
 def setup(app):
