@@ -14,8 +14,7 @@
 
 import os
 import subprocess
-import urlparse
-
+from six.moves.urllib import parse
 
 CGIT_BASE = 'http://git.openstack.org/cgit/'
 _cgit_link = None
@@ -31,7 +30,7 @@ def _html_page_context(app, pagename, templatename, context, doctree):
         except subprocess.CalledProcessError:
             _cgit_link = 'unknown'
         else:
-            parsed = urlparse.urlparse(git_remote)
+            parsed = parse.urlparse(git_remote)
             _cgit_link = CGIT_BASE + parsed.path.lstrip('/')
     context['cgit_link'] = _cgit_link
     return context
