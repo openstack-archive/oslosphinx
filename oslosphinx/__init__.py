@@ -14,8 +14,10 @@
 
 import os
 import subprocess
-import urlparse
-
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 CGIT_BASE = 'http://git.openstack.org/cgit/'
 _cgit_link = None
