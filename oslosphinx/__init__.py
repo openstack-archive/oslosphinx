@@ -34,7 +34,6 @@ def _html_page_context(app, pagename, templatename, context, doctree):
             parsed = parse.urlparse(git_remote)
             _cgit_link = CGIT_BASE + parsed.path.lstrip('/')
     context['cgit_link'] = _cgit_link
-    return context
 
 
 def builder_inited(app):
