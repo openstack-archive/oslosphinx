@@ -18,22 +18,24 @@ import subprocess
 
 
 CGIT_BASE = 'http://git.openstack.org/cgit/'
-_cgit_link = None
+
+
+def _guess_cgit_link():
+    try:
+        git_remote = subprocess.check_output(
+            ['git', 'config', '--local', '--get', 'remote.origin.url']
+        )
+    except subprocess.CalledProcessError:
+        return None
+    else:
+        parsed = parse.urlparse(git_remote)
+        return CGIT_BASE + parsed.path.lstrip('/')
 
 
 def _html_page_context(app, pagename, templatename, context, doctree):
-    global _cgit_link
-    if _cgit_link is None:
-        try:
-            git_remote = subprocess.check_output(
-                ['git', 'config', '--local', '--get', 'remote.origin.url']
-            )
-        except subprocess.CalledProcessError:
-            _cgit_link = 'unknown'
-        else:
-            parsed = parse.urlparse(git_remote)
-            _cgit_link = CGIT_BASE + parsed.path.lstrip('/')
-    context['cgit_link'] = _cgit_link
+    # Insert the cgit link into the template context.
+    context['cgit_link'] = app.config.oslosphinx_cgit_link
+    return context
 
 
 def builder_inited(app):
@@ -60,3 +62,7 @@ def builder_inited(app):
 
 def setup(app):
     app.connect('builder-inited', builder_inited)
+    # Try to guess at the default value for where the cgit repository
+    # is.
+    cgit_link = _guess_cgit_link()
+    app.add_config_value('oslosphinx_cgit_link', cgit_link, 'env')

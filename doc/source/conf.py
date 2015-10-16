@@ -26,6 +26,8 @@ extensions = [
     'oslosphinx'
 ]
 
+oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/oslosphinx'
+
 # autodoc generation is a bit aggressive and a nuisance when doing heavy
 # text edit cycles.
 # execute "export SPHINX_DEBUG=1" in your terminal to disable
