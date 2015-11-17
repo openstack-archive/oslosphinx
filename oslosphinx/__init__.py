@@ -35,7 +35,7 @@ def _guess_cgit_link():
 def _html_page_context(app, pagename, templatename, context, doctree):
     # Insert the cgit link into the template context.
     context['cgit_link'] = app.config.oslosphinx_cgit_link
-    return context
+    return None
 
 
 def builder_inited(app):
