@@ -21,11 +21,10 @@ CGIT_BASE = 'http://git.openstack.org/cgit/'
 
 
 def _guess_cgit_link():
-    try:
-        git_remote = subprocess.check_output(
-            ['git', 'config', '--local', '--get', 'remote.origin.url']
-        )
-    except subprocess.CalledProcessError:
+    (exit_code, git_remote) = subprocess.getstatusoutput(
+        ['git', 'config', '--local', '--get', 'remote.origin.url']
+    )
+    if exit_code:
         return None
     else:
         parsed = parse.urlparse(git_remote)
