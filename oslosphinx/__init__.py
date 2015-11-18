@@ -13,6 +13,7 @@
 #    under the License.
 
 import os
+import six
 from six.moves.urllib import parse
 import subprocess
 
@@ -28,6 +29,8 @@ def _guess_cgit_link():
     except subprocess.CalledProcessError:
         return None
     else:
+        if six.PY3:
+            git_remote = os.fdecode(git_remote)
         parsed = parse.urlparse(git_remote)
         return CGIT_BASE + parsed.path.lstrip('/')
 
