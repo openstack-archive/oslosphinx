@@ -31,7 +31,7 @@ def _guess_cgit_link():
         return None
     else:
         if six.PY3:
-            git_remote = os.fdecode(git_remote)
+            git_remote = os.fsdecode(git_remote)
         parsed = parse.urlparse(git_remote)
         return CGIT_BASE + parsed.path.lstrip('/')
 
