@@ -1,4 +1,0 @@
-recursive-include oslosphinx *.html *.css *.js *.conf *.jpg *.gif
-include AUTHORS
-include HACKING.rst
-include ChangeLog
