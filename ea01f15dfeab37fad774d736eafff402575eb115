@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Joshua Harlow <harlowja@yahoo-inc.com>
+Workflow+1: Joshua Harlow <harlowja@yahoo-inc.com>
+Code-Review+2: Julien Danjou <julien@danjou.info>
+Submitted-by: Jenkins
+Submitted-at: Fri, 11 Dec 2015 23:58:47 +0000
+Reviewed-on: https://review.openstack.org/256337
+Project: openstack/oslosphinx
+Branch: refs/heads/master
