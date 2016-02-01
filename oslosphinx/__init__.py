@@ -13,6 +13,7 @@
 #    under the License.
 
 import os
+import re
 import six
 from six.moves.urllib import parse
 import subprocess
@@ -33,7 +34,9 @@ def _guess_cgit_link():
         if six.PY3:
             git_remote = os.fsdecode(git_remote)
         parsed = parse.urlparse(git_remote)
-        return CGIT_BASE + parsed.path.lstrip('/')
+        parsed = '/'.join(parsed.path.rstrip('/').split('/')[-2:])
+        parsed = re.sub(r'\.git$', '', parsed)
+        return CGIT_BASE + parsed
 
 
 def _html_page_context(app, pagename, templatename, context, doctree):
