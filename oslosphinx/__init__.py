@@ -33,7 +33,8 @@ def _guess_cgit_link():
         if six.PY3:
             git_remote = os.fsdecode(git_remote)
         parsed = parse.urlparse(git_remote)
-        return CGIT_BASE + parsed.path.lstrip('/')
+        parsed = '/'.join(parsed.path.rstrip('/').split('/')[-2:])
+        return CGIT_BASE + parsed
 
 
 def _html_page_context(app, pagename, templatename, context, doctree):
