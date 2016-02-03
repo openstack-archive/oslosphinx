@@ -1,0 +1,11 @@
+Code-Review+1: Alexis Lee <lxsli@hpe.com>
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Code-Review+1: Steve Martinelli <stevemar@ca.ibm.com>
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Workflow+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 03 Feb 2016 13:57:41 +0000
+Reviewed-on: https://review.openstack.org/274881
+Project: openstack/oslosphinx
+Branch: refs/heads/master
