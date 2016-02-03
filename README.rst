@@ -2,6 +2,14 @@
  OpenStack Sphinx Extensions
 =============================
 
+.. image:: https://img.shields.io/pypi/v/oslosphinx.svg
+    :target: https://pypi.python.org/pypi/oslosphinx/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslosphinx.svg
+    :target: https://pypi.python.org/pypi/oslosphinx/
+    :alt: Downloads
+
 Theme and extension support for Sphinx documentation from the
 OpenStack project.
 
