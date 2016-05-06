@@ -30,6 +30,16 @@
                                   title="{{ _('next chapter') }}">{{ next.title }}</a></p>
           {%- endif %}
           {%- endblock %}
+          {%- block otherversions %}
+            {%- if other_versions %}
+              <h3>{{ _('Other Versions') }}</h3>
+              <ul class="this-page-menu">
+              {%- for ver in other_versions: %}
+                  <li><a href="/{{ver}}" rel="nofollow">{{ ver }}</a></li>
+              {%- endfor %}
+              </ul>
+            {%- endif %}
+          {%- endblock %}
           {%- block projectsource %}
             {%- if cgit_link %}
             <h3>{{ _('Project Source') }}</h3>

@@ -16,6 +16,7 @@ import os
 import re
 import six
 from six.moves.urllib import parse
+import string
 import subprocess
 
 
@@ -42,6 +43,20 @@ def _guess_cgit_link():
 def _html_page_context(app, pagename, templatename, context, doctree):
     # Insert the cgit link into the template context.
     context['cgit_link'] = app.config.oslosphinx_cgit_link
+
+    git_cmd = ["git", "tag"]
+    try:
+        raw_version_list = subprocess.Popen(
+            git_cmd, stdout=subprocess.PIPE).communicate()[0]
+    except OSError:
+        app.warn('Cannot get tags from git repository. '
+                 'Not setting "other_versions".')
+        raw_version_list = ''
+
+    # grab last five that start with a number and reverse the order
+    other_versions = [t for t in raw_version_list.split('\n')
+                      if t and t[0] in string.digits][:-6:-1]
+    context['other_versions'] = other_versions
     return None
 
 
