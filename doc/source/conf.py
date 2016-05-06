@@ -14,6 +14,9 @@
 
 import os
 import sys
+import string
+import subprocess
+import warnings
 
 sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration ----------------------------------------------------
@@ -75,3 +78,18 @@ latex_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'http://docs.python.org/': None}
+
+git_cmd = ["git", "tag"]
+try:
+    raw_version_list = subprocess.Popen(
+        git_cmd, stdout=subprocess.PIPE).communicate()[0]
+except OSError:
+    warnings.warn('Cannot get tags from git repository. '
+                  'Not setting "other_versions".')
+    raw_version_list = ''
+
+other_versions = [t for t in raw_version_list.split('\n')
+                  if t and t[0] in string.digits][::-1]
+html_context = {
+    'other_versions': other_versions,
+}
