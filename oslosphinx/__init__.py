@@ -54,6 +54,8 @@ def _html_page_context(app, pagename, templatename, context, doctree):
         raw_version_list = ''
 
     # grab last five that start with a number and reverse the order
+    if six.PY3:
+        raw_version_list = raw_version_list.decode("utf8")
     other_versions = [t for t in raw_version_list.split('\n')
                       if t and t[0] in string.digits][:-6:-1]
     context['other_versions'] = other_versions
