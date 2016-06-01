@@ -44,7 +44,11 @@ def _html_page_context(app, pagename, templatename, context, doctree):
     # Insert the cgit link into the template context.
     context['cgit_link'] = app.config.oslosphinx_cgit_link
 
-    git_cmd = ["git", "tag"]
+    # I'm not sure the suggestion to sort by taggerdate works as we'd like
+    git_cmd = [
+        "git", "for-each-ref", "--sort=taggerdate",
+        "--format", "'%(refname)'", "refs/tags"
+    ]
     try:
         raw_version_list = subprocess.Popen(
             git_cmd, stdout=subprocess.PIPE).communicate()[0]
@@ -56,8 +60,13 @@ def _html_page_context(app, pagename, templatename, context, doctree):
     # grab last five that start with a number and reverse the order
     if six.PY3:
         raw_version_list = raw_version_list.decode("utf8")
-    other_versions = [t for t in raw_version_list.split('\n')
-                      if t and t[0] in string.digits][:-6:-1]
+    # strip the 'refs/tags/' from the start of each version number
+    _tags = [t.strip("'")[10:] for t in raw_version_list.split('\n')]
+    other_versions = [
+        t for t in _tags if t and t[0] in string.digits
+        # Don't show alpha, beta or release candidate tags
+        and 'rc' not in t and 'a' not in t and 'b' not in t
+    ][:-5:-1]
     context['other_versions'] = other_versions
     return None
 
