@@ -22,7 +22,6 @@ import subprocess
 
 CGIT_BASE = 'http://git.openstack.org/cgit/'
 
-
 def _guess_cgit_link():
     try:
         git_remote = subprocess.check_output(
@@ -53,9 +52,9 @@ def _html_page_context(app, pagename, templatename, context, doctree):
                  'Not setting "other_versions".')
         raw_version_list = ''
 
-    # grab last five that start with a number and reverse the order
+    # grab last four that start with a number and reverse the order
     other_versions = [t for t in raw_version_list.split('\n')
-                      if t and t[0] in string.digits][:-6:-1]
+                      if t and t[0] in string.digits and 'rc' not in t][:-5:-1]
     context['other_versions'] = other_versions
     return None
 

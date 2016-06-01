@@ -34,9 +34,16 @@
             {%- if other_versions %}
               <h3>{{ _('Other Versions') }}</h3>
               <ul class="this-page-menu">
-              {%- for ver in other_versions: %}
-                  <li><a href="/{{ver}}" rel="nofollow">{{ ver }}</a></li>
-              {%- endfor %}
+                  <li><a href="{{ pathto(master_doc) }}" rel="nofollow">Current</a></li>
+                  {%- if project_doc_root %}
+                    {%- for ver in other_versions: %}
+                        <li><a href="{{ project_doc_root }}/{{ ver }}" rel="nofollow">{{ ver }}</a></li>
+                    {%- endfor %}
+                  {%- else %}
+                    {%- for ver in other_versions: %}
+                        <li><a href="/developer/{{ project }}/{{ ver }}" rel="nofollow">{{ ver }}</a></li>
+                    {%- endfor %}
+                  {%- endif %}
               </ul>
             {%- endif %}
           {%- endblock %}
