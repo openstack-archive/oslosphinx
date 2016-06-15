@@ -10,6 +10,7 @@ documentation from the OpenStack project.
 
    usage
    check_blueprints
+   support_matrix
    contributing
 
 Release Notes
