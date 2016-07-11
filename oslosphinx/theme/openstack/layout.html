@@ -31,7 +31,7 @@
           {%- endif %}
           {%- endblock %}
           {%- block otherversions %}
-            {%- if other_versions %}
+            {%- if want_other_versions and other_versions %}
               <h3>{{ _('Other Versions') }}</h3>
               <ul class="this-page-menu">
               {%- for ver in other_versions: %}

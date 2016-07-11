@@ -24,3 +24,14 @@ of projects, but to ensure that it is correct in all situations it is
 best to set the value in conf.py::
 
   oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/oslosphinx'
+
+Showing Older Versions of Documentation
+=======================================
+
+By default ``oslosphinx`` will use a project's git tags to generate
+links to older versions of documenation. If this behavior isn't
+desirable, set::
+
+  html_theme_options = {'want_other_versions': False}
+
+in your conf.py. The section will then be disabled.
