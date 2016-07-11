@@ -24,3 +24,14 @@ of projects, but to ensure that it is correct in all situations it is
 best to set the value in conf.py::
 
   oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/oslosphinx'
+
+Showing Older Versions of Documentation
+=======================================
+
+``oslosphinx`` can automatically add links for previous versions of your
+project's documentation to the sidebar. If this feature is enabled links
+will be generated for each git tag. To enable this behavior, set::
+
+  html_theme_options = {'show_other_versions': True}
+
+in your conf.py.
