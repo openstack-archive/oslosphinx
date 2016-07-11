@@ -43,6 +43,13 @@ def _guess_cgit_link():
 def _html_page_context(app, pagename, templatename, context, doctree):
     # Insert the cgit link into the template context.
     context['cgit_link'] = app.config.oslosphinx_cgit_link
+    context['other_versions'] = _get_other_versions(app)
+    return None
+
+
+def _get_other_versions(app):
+    if not app.config.html_theme_options.get('want_other_versions', True):
+        return []
 
     git_cmd = ["git", "tag"]
     try:
@@ -56,10 +63,8 @@ def _html_page_context(app, pagename, templatename, context, doctree):
     # grab last five that start with a number and reverse the order
     if six.PY3:
         raw_version_list = raw_version_list.decode("utf8")
-    other_versions = [t for t in raw_version_list.split('\n')
-                      if t and t[0] in string.digits][:-6:-1]
-    context['other_versions'] = other_versions
-    return None
+    return [t for t in raw_version_list.split('\n')
+            if t and t[0] in string.digits][:-6:-1]
 
 
 def builder_inited(app):
