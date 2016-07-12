@@ -1,0 +1,10 @@
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Code-Review+1: Masayuki Igawa <masayuki.igawa@gmail.com>
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Workflow+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 12 Jul 2016 15:20:41 +0000
+Reviewed-on: https://review.openstack.org/324024
+Project: openstack/oslosphinx
+Branch: refs/heads/master
