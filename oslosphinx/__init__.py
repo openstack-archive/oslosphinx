@@ -56,8 +56,12 @@ def _html_page_context(app, pagename, templatename, context, doctree):
     # grab last five that start with a number and reverse the order
     if six.PY3:
         raw_version_list = raw_version_list.decode("utf8")
-    other_versions = [t for t in raw_version_list.split('\n')
-                      if t and t[0] in string.digits][:-6:-1]
+    _tags = [t.strip("'") for t in raw_version_list.split('\n')]
+    other_versions = [
+        t for t in _tags if t and t[0] in string.digits
+        # Don't show alpha, beta or release candidate tags
+        and 'rc' not in t and 'a' not in t and 'b' not in t
+    ][:-5:-1]
     context['other_versions'] = other_versions
     return None
 
