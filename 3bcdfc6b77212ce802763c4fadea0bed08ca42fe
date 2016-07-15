@@ -1,0 +1,10 @@
+Code-Review+1: Steve Martinelli <s.martinelli@gmail.com>
+Code-Review+1: Lance Bragstad <lbragstad@gmail.com>
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Workflow+1: Joshua Harlow <jxharlow@godaddy.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 15 Jul 2016 00:46:47 +0000
+Reviewed-on: https://review.openstack.org/340509
+Project: openstack/oslosphinx
+Branch: refs/heads/master
