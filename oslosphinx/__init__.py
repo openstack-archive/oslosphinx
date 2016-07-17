@@ -55,14 +55,14 @@ def _get_other_versions(app):
     try:
         raw_version_list = subprocess.Popen(
             git_cmd, stdout=subprocess.PIPE).communicate()[0]
+        if six.PY3:
+            raw_version_list = raw_version_list.decode("utf8")
     except OSError:
         app.warn('Cannot get tags from git repository. '
                  'Not setting "other_versions".')
         raw_version_list = ''
 
     # grab last five that start with a number and reverse the order
-    if six.PY3:
-        raw_version_list = raw_version_list.decode("utf8")
     _tags = [t.strip("'") for t in raw_version_list.split('\n')]
     other_versions = [
         t for t in _tags if t and t[0] in string.digits
