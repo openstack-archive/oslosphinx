@@ -188,8 +188,8 @@ div.highlight{
 }
 
 div.note {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: #edf2f7;
+    border: 1px solid #2a4e68;
 }
 
 div.seealso {
@@ -204,6 +204,21 @@ div.topic {
 div.warning {
     background-color: #ffe4e4;
     border: 1px solid #f66;
+}
+
+div.important {
+    background-color: #feffbe;
+    border: 1px solid #d7aa16;
+}
+
+div.caution {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+div.tip {
+    background-color: #eee;
+    border: 1px solid #ccc;
 }
 
 p.admonition-title {
