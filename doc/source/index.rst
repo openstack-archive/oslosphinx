@@ -20,6 +20,14 @@ Release Notes
 
    history
 
+Development
+===========
+
+.. toctree::
+   :maxdepth: 1
+
+   theme_check
+
 Indices and tables
 ==================
 
