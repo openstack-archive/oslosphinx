@@ -21,3 +21,4 @@ doc/source/api/autoindex.rst
 doc/source/sourcecode
 *.mo
 .update-venv
+releasenotes/build
