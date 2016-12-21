@@ -1,0 +1,9 @@
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Code-Review+2: Michael Still <mikal@stillhq.com>
+Workflow+1: Michael Still <mikal@stillhq.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 21 Dec 2016 22:26:44 +0000
+Reviewed-on: https://review.openstack.org/410033
+Project: openstack/oslosphinx
+Branch: refs/heads/master
