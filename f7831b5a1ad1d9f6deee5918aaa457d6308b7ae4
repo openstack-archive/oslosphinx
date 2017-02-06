@@ -1,0 +1,8 @@
+Code-Review+2: Davanum Srinivas (dims) <davanum@gmail.com>
+Workflow+1: Davanum Srinivas (dims) <davanum@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 06 Feb 2017 21:23:38 +0000
+Reviewed-on: https://review.openstack.org/423480
+Project: openstack/oslosphinx
+Branch: refs/heads/stable/ocata
