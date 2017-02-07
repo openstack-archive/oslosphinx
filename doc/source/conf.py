@@ -26,7 +26,7 @@ extensions = [
     'oslosphinx'
 ]
 
-oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/oslosphinx'
+oslosphinx_cgit_link = 'https://git.openstack.org/cgit/openstack/oslosphinx'
 
 # autodoc generation is a bit aggressive and a nuisance when doing heavy
 # text edit cycles.
