@@ -22,6 +22,13 @@ Team and repository tags
 Theme and extension support for Sphinx documentation from the
 OpenStack project.
 
+Using the Theme
+===============
+
+Prior to using this theme, ensure your project can use the OpenStack
+brand by referring to the brand guidelines at
+http://www.openstack.org/brand.
+
 * Free software: Apache License, Version 2.0
 * Documentation: http://docs.openstack.org/developer/oslosphinx
 * Source: http://git.openstack.org/cgit/openstack/oslosphinx

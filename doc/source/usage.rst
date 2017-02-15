@@ -2,6 +2,21 @@
  Using the oslosphinx Theme
 ============================
 
+Guidelines
+==========
+
+Prior to using this theme, ensure your project can use the OpenStack
+brand by referring to the brand guidelines at
+http://www.openstack.org/brand. In particular, if the project is not
+under OpenStack governance as an "official" project, it should not use
+this theme.
+
+If your documentation is not being published to an openstack.org site,
+that may be a signal that you should not use this theme.
+
+Sphinx Configuration
+====================
+
 To use the theme, add ``'oslosphinx'`` to the ``extensions`` list in
 the ``conf.py`` file in your Sphinx project.
 
