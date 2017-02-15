@@ -85,6 +85,7 @@ def builder_inited(app):
     # Set the theme name
     if not app.config.html_theme.startswith('openstack'):
         app.config.html_theme = 'openstack'
+        app.config.html_context.update({'html_theme': 'openstack'})
     # Re-initialize the builder, if it has the method for setting up
     # the templates and theme.
     if hasattr(app.builder, 'init_templates'):
