@@ -14,7 +14,8 @@
           {%- endblock %}
           {%- block sidebartoc %}
           {%- if display_toc %}
-            <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+            <h3>{{ _('Table Of Contents') }}</h3>
+            <ul><li><a href="{{ pathto(master_doc) }}">Return to project home page</a></li></ul>
             {{ toc }}
           {%- endif %}
           {%- endblock %}
