@@ -28,7 +28,7 @@ def _guess_cgit_link():
         git_remote = subprocess.check_output(
             ['git', 'config', '--local', '--get', 'remote.origin.url']
         )
-    except (OSError, subprocess.CalledProcessError):
+    except Exception:
         # git is not present or the command failed
         return None
     else:
