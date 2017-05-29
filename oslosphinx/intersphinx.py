@@ -61,7 +61,7 @@ mapping = dict(
         'http://docs.openstack.org/developer/python-swiftclient/', None),
     troveclient=(
         'http://docs.openstack.org/developer/python-troveclient/', None),
-    quantum=('http://docs.openstack.org/developer/quantum/', None),
+    neutron=('http://docs.openstack.org/developer/neutron/', None),
     swift=('http://docs.openstack.org/developer/swift/', None),
     trove=('http://docs.openstack.org/developer/trove/', None),
     # Other things of note
