@@ -55,8 +55,8 @@ mapping = dict(
         'http://docs.openstack.org/developer/python-novaclient/', None),
     openstackclient=(
         'http://docs.openstack.org/developer/python-openstackclient/', None),
-    quantumclient=(
-        'http://docs.openstack.org/developer/python-swiftclient/', None),
+    neutronclient=(
+        'http://docs.openstack.org/developer/python-neutronclient/', None),
     swiftclient=(
         'http://docs.openstack.org/developer/python-swiftclient/', None),
     troveclient=(
