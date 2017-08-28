@@ -1,0 +1,6 @@
+---
+prelude: >-
+  oslosphinx is obsolete. The openstackdocstheme package should be used
+  instead. oslosphinx will be maintained for the pike, ocata, and newton
+  release series and completely remove after that pike is marked
+  end-of-life.

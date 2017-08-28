@@ -1,35 +1,17 @@
-========================
-Team and repository tags
-========================
-
-.. image:: http://governance.openstack.org/badges/oslosphinx.svg
-    :target: http://governance.openstack.org/reference/tags/index.html
-
-.. Change things from this point on
-
 =============================
  OpenStack Sphinx Extensions
 =============================
 
-.. image:: https://img.shields.io/pypi/v/oslosphinx.svg
-    :target: https://pypi.python.org/pypi/oslosphinx/
-    :alt: Latest Version
+oslosphinx is obsolete. The openstackdocstheme package should be used
+instead. oslosphinx will be maintained for the pike, ocata, and newton
+release series and completely remove after that pike is marked
+end-of-life.
 
-.. image:: https://img.shields.io/pypi/dm/oslosphinx.svg
-    :target: https://pypi.python.org/pypi/oslosphinx/
-    :alt: Downloads
+The contents of this repository are still available in the Git source
+code management system.  To see the contents of this repository before
+it reached its end of life, please check out the previous commit with
+"git checkout HEAD^1", or check out one of the supported stable
+branches.
 
-Theme and extension support for Sphinx documentation from the
-OpenStack project.
-
-Using the Theme
-===============
-
-Prior to using this theme, ensure your project can use the OpenStack
-brand by referring to the brand guidelines at
-http://www.openstack.org/brand.
-
-* Free software: Apache License, Version 2.0
-* Documentation: http://docs.openstack.org/developer/oslosphinx
-* Source: http://git.openstack.org/cgit/openstack/oslosphinx
-* Bugs: http://bugs.launchpad.net/oslosphinx
+For any further questions, please email
+openstack-dev@lists.openstack.org or join #openstack-oslo on Freenode.
