@@ -1,0 +1,9 @@
+Code-Review+1: David Rabel <rabel@b1-systems.de>
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Workflow+1: Doug Hellmann <doug@doughellmann.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 01 Dec 2017 13:35:09 +0000
+Reviewed-on: https://review.openstack.org/524522
+Project: openstack/oslosphinx
+Branch: refs/heads/master
