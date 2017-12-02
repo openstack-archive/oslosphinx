@@ -1,0 +1,8 @@
+Code-Review+2: Doug Hellmann <doug@doughellmann.com>
+Workflow+1: Doug Hellmann <doug@doughellmann.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Sat, 02 Dec 2017 19:00:26 +0000
+Reviewed-on: https://review.openstack.org/524914
+Project: openstack/oslosphinx
+Branch: refs/heads/master
