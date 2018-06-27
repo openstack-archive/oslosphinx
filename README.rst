@@ -15,3 +15,8 @@ branches.
 
 For any further questions, please email
 openstack-dev@lists.openstack.org or join #openstack-oslo on Freenode.
+
+Release Notes
+-------------
+
+* https://docs.openstack.org/releasenotes/oslosphinx
