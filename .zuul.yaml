@@ -1,0 +1,15 @@
+- project:
+    post:
+      jobs:
+        - publish-openstack-python-branch-tarball
+    gate:
+      jobs:
+        - openstack-tox-pep8
+    check:
+      jobs:
+        - openstack-tox-pep8
+    templates:
+      - publish-openstack-docs-pti
+      - check-requirements
+      - release-notes-jobs-python3
+      - periodic-stable-jobs
