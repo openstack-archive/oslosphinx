@@ -1,0 +1,9 @@
+Code-Review+2: Stephen Finucane <stephenfin@redhat.com>
+Code-Review+2: Ken Giusti <kgiusti@gmail.com>
+Workflow+1: Ken Giusti <kgiusti@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 07 Aug 2018 16:36:57 +0000
+Reviewed-on: https://review.openstack.org/588770
+Project: openstack/oslosphinx
+Branch: refs/heads/stable/pike
