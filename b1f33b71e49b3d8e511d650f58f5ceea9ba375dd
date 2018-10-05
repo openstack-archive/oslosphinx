@@ -1,0 +1,13 @@
+Code-Review+1: zhulingjie <easyzlj@gmail.com>
+Code-Review+1: caoyuan <cao.yuan@99cloud.net>
+Code-Review+1: wangqi <wang.qi@99cloud.net>
+Code-Review+1: wu.chunyang <wu.chunyang@99cloud.net>
+Code-Review+1: jacky06 <zhang.min@99cloud.net>
+Code-Review+2: Ben Nemec <openstack@nemebean.com>
+Workflow+1: Ben Nemec <openstack@nemebean.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 05 Oct 2018 15:48:51 +0000
+Reviewed-on: https://review.openstack.org/597508
+Project: openstack/oslosphinx
+Branch: refs/heads/master
