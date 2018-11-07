@@ -1,0 +1,8 @@
+Code-Review+2: Stephen Finucane <stephenfin@redhat.com>
+Workflow+1: Stephen Finucane <stephenfin@redhat.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 07 Nov 2018 12:21:15 +0000
+Reviewed-on: https://review.openstack.org/616111
+Project: openstack/oslosphinx
+Branch: refs/heads/master
