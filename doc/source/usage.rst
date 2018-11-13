@@ -7,7 +7,7 @@ Guidelines
 
 Prior to using this theme, ensure your project can use the OpenStack
 brand by referring to the brand guidelines at
-http://www.openstack.org/brand. In particular, if the project is not
+https://www.openstack.org/brand. In particular, if the project is not
 under OpenStack governance as an "official" project, it should not use
 this theme.
 
@@ -38,7 +38,7 @@ being documented. The default is a guess, and will be right for a lot
 of projects, but to ensure that it is correct in all situations it is
 best to set the value in conf.py::
 
-  oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/oslosphinx'
+  oslosphinx_cgit_link = 'https://git.openstack.org/cgit/openstack/oslosphinx'
 
 Showing Older Versions of Documentation
 =======================================
