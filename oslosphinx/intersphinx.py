@@ -28,42 +28,42 @@ You'll be able to link to other project's documentation, such as:
 
 mapping = dict(
     # OpenStack Projects
-    ceilometer=('http://docs.openstack.org/developer/ceilometer/', None),
-    cinder=('http://docs.openstack.org/developer/cinder/', None),
-    glance=('http://docs.openstack.org/developer/glance/', None),
-    heat=('http://docs.openstack.org/developer/heat/', None),
-    horizon=('http://docs.openstack.org/developer/horizon/', None),
-    ironic=('http://docs.openstack.org/developer/ironic/', None),
-    keystone=('http://docs.openstack.org/developer/keystone/', None),
-    nova=('http://docs.openstack.org/developer/nova/', None),
-    oslo_config=('http://docs.openstack.org/developer/oslo.config/', None),
+    ceilometer=('http://docs.openstack.org/ceilometer/latest/', None),
+    cinder=('http://docs.openstack.org/cinder/latest/', None),
+    glance=('http://docs.openstack.org/glance/latest/', None),
+    heat=('http://docs.openstack.org/heat/latest/', None),
+    horizon=('http://docs.openstack.org/horizon/latest/', None),
+    ironic=('http://docs.openstack.org/ironic/latest/', None),
+    keystone=('http://docs.openstack.org/keystone/latest/', None),
+    nova=('http://docs.openstack.org/nova/latest/', None),
+    oslo_config=('http://docs.openstack.org/oslo.config/latest/', None),
     oslo_messaging=(
-        'http://docs.openstack.org/developer/oslo.messaging/', None),
+        'http://docs.openstack.org/oslo.messaging/latest/', None),
     ceilometerclient=(
-        'http://docs.openstack.org/developer/python-ceilometerclient/', None),
+        'http://docs.openstack.org/python-ceilometerclient/latest/', None),
     cinderclient=(
-        'http://docs.openstack.org/developer/python-cinderclient/', None),
+        'http://docs.openstack.org/python-cinderclient/latest/', None),
     glanceclient=(
-        'http://docs.openstack.org/developer/python-glanceclient/', None),
+        'http://docs.openstack.org/python-glanceclient/latest/', None),
     heatclient=(
-        'http://docs.openstack.org/developer/python-heatclient/', None),
+        'http://docs.openstack.org/python-heatclient/latest/', None),
     ironicclient=(
-        'http://docs.openstack.org/developer/python-ironicclient/', None),
+        'http://docs.openstack.org/python-ironicclient/latest/', None),
     keystoneclient=(
-        'http://docs.openstack.org/developer/python-keystoneclient/', None),
+        'http://docs.openstack.org/python-keystoneclient/latest/', None),
     novaclient=(
-        'http://docs.openstack.org/developer/python-novaclient/', None),
+        'http://docs.openstack.org/python-novaclient/latest/', None),
     openstackclient=(
-        'http://docs.openstack.org/developer/python-openstackclient/', None),
+        'http://docs.openstack.org/python-openstackclient/latest/', None),
     neutronclient=(
-        'http://docs.openstack.org/developer/python-neutronclient/', None),
+        'http://docs.openstack.org/python-neutronclient/latest/', None),
     swiftclient=(
-        'http://docs.openstack.org/developer/python-swiftclient/', None),
+        'http://docs.openstack.org/python-swiftclient/latest/', None),
     troveclient=(
-        'http://docs.openstack.org/developer/python-troveclient/', None),
-    neutron=('http://docs.openstack.org/developer/neutron/', None),
-    swift=('http://docs.openstack.org/developer/swift/', None),
-    trove=('http://docs.openstack.org/developer/trove/', None),
+        'http://docs.openstack.org/python-troveclient/latest/', None),
+    neutron=('http://docs.openstack.org/neutron/latest/', None),
+    swift=('http://docs.openstack.org/swift/latest/', None),
+    trove=('http://docs.openstack.org/trove/latest/', None),
     # Other things of note
     python=('http://docs.python.org/', None),
     infra=('http://docs.openstack.org/infra/system-config/', None),
