@@ -1,0 +1,8 @@
+Code-Review+2: Ben Nemec <openstack@nemebean.com>
+Workflow+1: Ben Nemec <openstack@nemebean.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 17 Dec 2018 15:14:49 +0000
+Reviewed-on: https://review.openstack.org/625218
+Project: openstack/oslosphinx
+Branch: refs/heads/master
