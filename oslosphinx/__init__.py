@@ -14,13 +14,16 @@
 
 import os
 import re
-import six
-from six.moves.urllib import parse
 import string
 import subprocess
 
+import six
+from six.moves.urllib import parse
+from sphinx.util import logging
+
 
 CGIT_BASE = 'http://git.openstack.org/cgit/'
+LOG = logging.getLogger(__name__)
 
 
 def _guess_cgit_link():
@@ -57,7 +60,7 @@ def _get_other_versions(app):
             git_cmd, stdout=subprocess.PIPE).communicate()[0]
         raw_version_list = raw_version_list.decode("utf8")
     except OSError:
-        app.warn('Cannot get tags from git repository. '
+        LOG.warn('Cannot get tags from git repository. '
                  'Not setting "other_versions".')
         raw_version_list = u''
 
@@ -73,7 +76,7 @@ def _get_other_versions(app):
 
 def builder_inited(app):
     theme_dir = os.path.join(os.path.dirname(__file__), 'theme')
-    app.info('Using openstack theme from %s' % theme_dir)
+    LOG.info('Using openstack theme from %s', theme_dir)
     # Insert our theme directory at the front of the search path and
     # force the theme setting to use the one in the package unless
     # another openstack theme is already selected. This is done here,
