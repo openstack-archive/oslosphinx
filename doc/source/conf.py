@@ -12,36 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
 
-sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration ----------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
-    #'sphinx.ext.intersphinx',
     'openstackdocstheme'
 ]
 
+
 # -- Options for openstackdocstheme -------------------------------------------
+
 repository_name = 'openstack/oslosphinx'
 bug_project = 'oslosphinx'
 bug_tag = ''
 
 # Must set this variable to include year, month, day, hours, and minutes.
 html_last_updated_fmt = '%Y-%m-%d %H:%M'
-
-oslosphinx_cgit_link = 'https://git.openstack.org/cgit/openstack/oslosphinx'
-
-# autodoc generation is a bit aggressive and a nuisance when doing heavy
-# text edit cycles.
-# execute "export SPHINX_DEBUG=1" in your terminal to disable
-
-# The suffix of source filenames.
-source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -50,26 +39,18 @@ master_doc = 'index'
 project = u'oslosphinx'
 copyright = u'2013, OpenStack Foundation'
 
-# If true, '()' will be appended to :func: etc. cross-reference text.
-add_function_parentheses = True
-
-# If true, the current module name will be prepended to all description
-# unit titles (such as .. function::).
-add_module_names = True
-
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
+
 
 # -- Options for HTML output --------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-# html_theme_path = ["."]
 html_theme = 'openstackdocs'
-# html_static_path = ['static']
 
-# Output file base name for HTML help builder.
-htmlhelp_basename = '%sdoc' % project
+
+# -- Options for LaTeX output -------------------------------------------------
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
@@ -80,6 +61,3 @@ latex_documents = [
      u'%s Documentation' % project,
      u'OpenStack Foundation', 'manual'),
 ]
-
-# Example configuration for intersphinx: refer to the Python standard library.
-#intersphinx_mapping = {'http://docs.python.org/': None}
